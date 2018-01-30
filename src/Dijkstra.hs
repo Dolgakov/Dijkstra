@@ -19,13 +19,6 @@ type Distance = Vector Float
 inf = 1 / 0
 type Label = Int
 
-testLists :: [[(Int, Float)]]
-testLists = [
-    [(1,1), (2,5)],
-    [(0,1), (2,2), (3,4)],
-    [(0,5), (1,2), (3,4)],
-    [(1,4), (2,4)]]
-
 -- [[(Label, Weight)]] -> AdjList
 fromLists :: [[(Int, Float)]] -> AdjList
 fromLists xs = fromList (fmap fromList ((fmap . fmap) (\(l,w) -> Vertex l w) xs))
