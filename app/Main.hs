@@ -11,5 +11,4 @@ main = let
         [(1,4), (2,4)]]
 
     source = 2
-    vertNum = 4
-    in print $ dijkstra adj source vertNum 
+    in print $ findPaths adj source 
